@@ -1,0 +1,237 @@
+:root {
+  --color-primary: #6741d9;
+  --color-primary-light: #7950f2;
+  --color-text: #dee2e6;
+  --color-text-dark: #adb5bd;
+  --color-background-100: #343a40;
+  --color-background-500: #2b3035;
+  --color-background-900: #212529;
+  --color-red: #fa5252;
+  --color-red-dark: #e03131;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background-900);
+
+  /* Animations */
+  animation: fadeInAnimation ease 1.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.page-title {
+  text-align: center;
+  margin: 20px;
+}
+
+h2,
+h3 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+  font-size: 60px;
+  font-family: 'Bangers';
+}
+
+.page-description h4{
+  padding-bottom: 45px;
+  font-size: 22px;
+  font-family: 'Bangers';
+  color: #3498db;
+}
+
+.note{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note h4{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 15px;
+  color: grey;
+}
+
+.form {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.panel-input {
+  margin-bottom: 20px;
+  flex: 0 0 45%;
+}
+
+.panel-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Bangers';
+  font-size: large;
+  color: #3498db; /* Light blue color for the label */
+}
+
+.panel-input input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: transparent;
+  /* font-family: 'Bangers'; */
+  border: 1px solid #ccc;
+  margin-top: 5px; /* Margin for the input field */
+  height: 60px;
+}
+
+.generate-button {
+  border-radius: 5px;
+  padding:15px 25px 15px 25px ;
+  background-color: #212529;
+  color: white;
+  border-top: solid 3px #3498db;
+  border-left: solid 3px #3498db;
+  border-bottom: none;
+  border-right: none;
+  font-size: 17px;
+  font-family: 'Bangers';
+  margin: 20px;
+  width: 40%;
+  /* margin-bottom: 50px; */
+}
+
+.generate-button:hover{
+  transition: 0.2s;
+  background-color: #3498db;
+  transform: translateY(-4px);
+}
+
+.comic-page {
+  margin-top: 20px;
+}
+
+.panels-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: white;
+}
+
+.panel {
+  width: 50%; /* Adjusted width to accommodate 2 images in a row with margin */
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.panel-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* border-radius: 5px; */
+}
+
+.panel-description {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'Bangers';
+  font-size: 15px;
+}
+
+.warning {
+  color: red;
+  font-size: 18px;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  margin-top: 15px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: 80px;
+  background-color: #212529;
+  color: #000000;
+}
+
+.company-logo{
+  display: flex;
+  padding-left: 13%;
+  align-items: center;
+
+}
+
+.company-logo h1{
+  font-size: 25px;
+  color: white;
+  padding-left: 1px;
+}
+
+.company-logo img{
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  padding-right: 10%;
+}
+
+.nav-links a {
+  font-family: 'Bangers';
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  padding-left: 3%;
+}
+
+/* Style the links on hover or active */
+.nav-links a:hover,
+.nav-links a:active {
+  color: #3498db;
+  transform: translateY(-2px);
+}
